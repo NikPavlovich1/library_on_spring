@@ -3,9 +3,9 @@ spring:
   name:
     library_on_spring: library_on_spring
   datasource:
-    url: jdbc:postgresql://localhost:5432/library_db
-    username: library_user
-    password: library_pass
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: pass
   jpa:
     hibernate:
       ddl-auto: update
