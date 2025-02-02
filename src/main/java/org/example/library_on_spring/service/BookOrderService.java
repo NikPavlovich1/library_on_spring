@@ -1,6 +1,7 @@
-package org.example.library_on_spring.database.service;
+package org.example.library_on_spring.service;
 
 import org.example.library_on_spring.database.entity.Book;
+import org.example.library_on_spring.exception.BookOrderException;
 import org.example.library_on_spring.database.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +37,7 @@ public class BookOrderService {
         try {
             bookRepository.saveAll(books);
         } catch (Exception e) {
-            throw new RuntimeException("Ошибка при сохранении книги", e);
+            throw new BookOrderException("Ошибка при сохранении книги", e);
         }
     }
 

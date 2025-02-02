@@ -35,7 +35,6 @@ public class Book {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    @Column(nullable = true)
     private User user;
 
     @PrePersist
