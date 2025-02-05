@@ -36,6 +36,7 @@ dependencies {
     implementation 'org.springframework.data:spring-data-envers'
     implementation 'org.liquibase:liquibase-core'
 
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
     testImplementation "org.testcontainers:postgresql:${versions.testcontainers}"
@@ -47,4 +48,10 @@ test {
 
 wrapper{
     gradleVersion '8.10'
+}
+processResources {
+    from('src/main/resources')
+}
+tasks.processResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }

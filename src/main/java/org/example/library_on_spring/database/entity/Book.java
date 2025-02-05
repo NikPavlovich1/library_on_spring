@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.envers.Audited;
 
 @Data
 @Entity
@@ -12,7 +13,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Table(name = "books")
 @Builder
-public class Book {
+@Audited
+public class Book implements BaseEntity<Long>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,6 +40,7 @@ public class Book {
     private User user;
 
     @PrePersist
+    @PreUpdate
     public void compositeKey() {
         this.compositeKey = this.category + "-" + this.categoryOrder;
     }

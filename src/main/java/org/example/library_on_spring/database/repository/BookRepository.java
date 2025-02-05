@@ -14,6 +14,4 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     @Query("select max(b.categoryOrder) from Book b where b.category = :category")
     Long findMaxCategoryOrderByCategory(String category);
 
-    Long id(Long id);
-
 }

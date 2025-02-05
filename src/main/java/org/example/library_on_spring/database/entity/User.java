@@ -1,18 +1,26 @@
 package org.example.library_on_spring.database.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.envers.Audited;
+import org.hibernate.envers.NotAudited;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedEntityGraph(
+        name = "User.book",
+        attributeNodes = @NamedAttributeNode("book")
+)
 @Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "users")
 @Builder
+@Audited
 public class User {
 
     @Id
@@ -30,8 +38,11 @@ public class User {
     @Column(nullable = false)
     private LocalDate createdAt;
 
-    @OneToMany(mappedBy = "user")
-    private List<Book> books = new ArrayList<>();
+    @NotAudited
+    @Builder.Default
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @JsonIgnore
+    private List<Book> book = new ArrayList<>();
 
     @PrePersist
     public void setCreatedAt() {

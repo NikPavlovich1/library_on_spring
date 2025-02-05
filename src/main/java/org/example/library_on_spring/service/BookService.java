@@ -20,7 +20,7 @@ public class BookService {
 
     public Book findById(Long id){
         return bookRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Книга не найдена"));
+                .orElseThrow(() -> new RuntimeException("Книга не найдена " + id));
     }
 
     public Book save(Book book){

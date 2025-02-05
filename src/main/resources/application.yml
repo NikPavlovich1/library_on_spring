@@ -21,14 +21,12 @@ logging:
     com.example.spring.database.pool: INFO
     org.springframework.jdbc.core: INFO
     org.springframework.security: DEBUG
+    liquibase: DEBUG
   file:
     name: application.log
     path: /
 
 spring:
-  liquibase:
-    change-log: G:\projects\library_on_spring\src\main\resources\db.changelog\db.changelog-master.yaml
-    enabled: false
   application:
     name:
       default: library_on_spring
@@ -41,6 +39,9 @@ spring:
       connection-timeout: 30000
     dbcp2:
       test-on-borrow: true
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yml
+    enabled: false
   jpa:
     properties.hibernate:
       batch_size: 50

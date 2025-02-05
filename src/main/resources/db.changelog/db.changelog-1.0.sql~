@@ -31,5 +31,5 @@ CREATE TABLE Transactions (
     return_date TIMESTAMP,
     CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES Users(id),
     CONSTRAINT fk_book FOREIGN KEY (book_id) REFERENCES Books(id),
-    CONSTRAINT unique_book_issue UNIQUE (book_id, return_date)
+    CREATE UNIQUE INDEX unique_book_issue_idx ON Transactions(book_id, COALESCE(return_date, '1970-01-01')
 );

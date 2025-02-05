@@ -1,7 +1,8 @@
 package org.example.library_on_spring.controller;
 
-import lombok.RequiredArgsConstructor;
-import org.example.library_on_spring.database.entity.User;
+import lombok.extern.slf4j.Slf4j;
+import org.example.library_on_spring.dto.UserCreateEditDto;
+import org.example.library_on_spring.dto.UserReadDto;
 import org.example.library_on_spring.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -20,28 +22,32 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<List<User>> fildAll() {
-        List<User> users = userService.findAll();
-        return new ResponseEntity<>(users, HttpStatus.OK);
+    public ResponseEntity<List<UserReadDto>> findAll() {
+        List<UserReadDto> users = userService.findAll();
+        return ResponseEntity.ok(users);
     }
+
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> findById(@PathVariable Long id) {
-        User user = userService.findById(id);
-        return new ResponseEntity<>(user, HttpStatus.OK);
+    public ResponseEntity<UserReadDto> findById(@PathVariable Long id) {
+        UserReadDto user = userService.findById(id);
+        return ResponseEntity.ok(user);
     }
+
 
     @PostMapping
-    public ResponseEntity<User> create(@RequestBody User user) {
-        User createdUser = userService.save(user);
-        return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
+    public ResponseEntity<UserReadDto> create(@RequestBody UserCreateEditDto userDto) {
+        UserReadDto createdUser = userService.create(userDto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
     }
 
+
     @PutMapping("/{id}")
-    public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User user) {
-        User updatedUser = userService.update(id, user);
-        return new ResponseEntity<>(updatedUser, HttpStatus.OK);
+    public ResponseEntity<UserReadDto> update(@PathVariable Long id, @RequestBody UserCreateEditDto userDto) {
+        UserReadDto updatedUser = userService.update(id, userDto);
+        return ResponseEntity.ok(updatedUser);
     }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {

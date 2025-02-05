@@ -21,13 +21,13 @@ public class BookController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Book>> getAllBooks() {
+    public ResponseEntity<List<Book>> findAll() {
         List<Book> books = bookService.findAll();
         return new ResponseEntity<>(books, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Book> getBookById(@PathVariable Long id) {
+    public ResponseEntity<Book> findById(@PathVariable Long id) {
         Book book = bookService.findById(id);
         return new ResponseEntity<>(book, HttpStatus.OK);
     }
