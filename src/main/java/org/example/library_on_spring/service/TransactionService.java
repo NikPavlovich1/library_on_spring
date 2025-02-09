@@ -45,7 +45,6 @@ public class TransactionService {
     public Transaction issueBook(Long userId, Long bookId) {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("Пользователь не найден"));
-
         Book book = bookRepository.findById(bookId)
                 .orElseThrow(() -> new RuntimeException("Книга не найдена"));
         // Проверяем, есть ли уже активная выдача этой книги

@@ -2,6 +2,8 @@ package org.example.library_on_spring.service;
 
 import org.example.library_on_spring.database.entity.Book;
 import org.example.library_on_spring.database.repository.BookRepository;
+import org.example.library_on_spring.dto.BookCreateEditDto;
+import org.example.library_on_spring.dto.BookUpdateDto;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,7 +15,8 @@ public class BookService {
 
     private final BookRepository bookRepository;
 
-    public BookService(BookRepository bookRepository) {
+    public BookService(
+            BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
     public List<Book> findAll(){
@@ -29,17 +32,21 @@ public class BookService {
         return bookRepository.save(book);
     }
 
-    public Book update(Long id, Book updatedBook) {
+    public Book update(Long id, BookUpdateDto bookUpdateDto) {
         Book existingBook = findById(id); // Находим книгу по ID
-        existingBook.setTitle(updatedBook.getTitle());
-        existingBook.setAuthor(updatedBook.getAuthor());
-        existingBook.setCategory(updatedBook.getCategory());
-        existingBook.setCategoryOrder(updatedBook.getCategoryOrder());
-        existingBook.setUser(updatedBook.getUser());
+        existingBook.setTitle(bookUpdateDto.getTitle());
+        existingBook.setAuthor(bookUpdateDto.getAuthor());
+        existingBook.setCategory(bookUpdateDto.getCategory());
+        existingBook.setCategoryOrder(Long.valueOf(bookUpdateDto.getCategoryOrder()));
         return bookRepository.save(existingBook); // Сохраняем обновленную книгу
     }
 
     public void delete(Long id){
         bookRepository.deleteById(id);
     }
+
+    public List<Book> findByCategory(String category) {
+        return bookRepository.findByCategory(category);
+    }
+
 }

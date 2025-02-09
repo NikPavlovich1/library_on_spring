@@ -2,6 +2,7 @@ package org.example.library_on_spring.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.library_on_spring.database.entity.Book;
+import org.example.library_on_spring.dto.BookUpdateDto;
 import org.example.library_on_spring.service.BookService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -39,8 +40,8 @@ public class BookController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Book> updateBook(@PathVariable Long id, @RequestBody Book book) {
-        Book updatedBook = bookService.update(id, book);
+    public ResponseEntity<Book> updateBook(@PathVariable Long id, @RequestBody BookUpdateDto bookUpdateDto) {
+        Book updatedBook = bookService.update(id, bookUpdateDto);
         return new ResponseEntity<>(updatedBook, HttpStatus.OK);
     }
 
@@ -49,4 +50,11 @@ public class BookController {
         bookService.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @GetMapping("/filter")
+    public ResponseEntity<List<Book>> findByCategory(@RequestParam String category) {
+        List<Book> books = (category == null) ? bookService.findAll() : bookService.findByCategory(category);
+        return new ResponseEntity<>(books, HttpStatus.OK);
+    }
+
 }
