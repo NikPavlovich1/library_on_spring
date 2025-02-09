@@ -12,9 +12,5 @@ import java.util.Optional;
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
     List<Transaction> findByUserId(Long userId);
     List<Transaction> findByBookId(Long bookId);
-    boolean existsByBookAndReturnDateIsNull(Book book);
-
-    Optional<Transaction> findActiveTransactionByBook(Book book);
-
     Optional<Transaction> findByBookAndReturnDateIsNull(Book book);
 }

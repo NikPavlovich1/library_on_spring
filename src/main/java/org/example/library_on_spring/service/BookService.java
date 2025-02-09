@@ -3,10 +3,12 @@ package org.example.library_on_spring.service;
 import org.example.library_on_spring.database.entity.Book;
 import org.example.library_on_spring.database.repository.BookRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class BookService {
 
     private final BookRepository bookRepository;

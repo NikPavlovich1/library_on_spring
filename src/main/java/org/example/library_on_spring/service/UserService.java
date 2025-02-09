@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class UserService {
 
     private final UserRepository userRepository;
@@ -65,7 +66,7 @@ public class UserService {
       if (userDto.getBookId() != null) {
             Book book = new Book();
             book.setId(userDto.getBookId());
-            existingUser.setBook((List<Book>) book);
+            existingUser.getBook().add(book);
         }
         return userReadMapper.map(userRepository.save(existingUser));
     }

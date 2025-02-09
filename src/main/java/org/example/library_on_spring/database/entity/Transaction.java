@@ -17,21 +17,17 @@ public class Transaction {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "fk_user", value = ConstraintMode.CONSTRAINT))
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "book_id", nullable = false)
+    @JoinColumn(name = "book_id", foreignKey = @ForeignKey(name = "fk_book", value = ConstraintMode.CONSTRAINT))
     private Book book;
+
 
     @Column(nullable = false)
     private LocalDateTime issueDate;
 
     private LocalDateTime returnDate;
 
-    public Transaction(User user, Book book, LocalDateTime issueDate) {
-        this.user = user;
-        this.book = book;
-        this.issueDate = issueDate;
-    }
 }

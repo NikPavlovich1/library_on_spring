@@ -1,11 +1,15 @@
 package org.example.library_on_spring.database.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.envers.Audited;
+import org.hibernate.envers.NotAudited;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -44,4 +48,9 @@ public class Book implements BaseEntity<Long>{
     public void compositeKey() {
         this.compositeKey = this.category + "-" + this.categoryOrder;
     }
+
+    @NotAudited
+    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
+    private List<Transaction> transactions;
 }

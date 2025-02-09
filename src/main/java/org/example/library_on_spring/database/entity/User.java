@@ -48,4 +48,9 @@ public class User {
     public void setCreatedAt() {
         this.createdAt = LocalDate.now();
     }
+
+    @NotAudited
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
+    private List<Transaction> transactions;
 }
