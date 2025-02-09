@@ -1,6 +1,7 @@
 package org.example.library_on_spring.controller;
 
 import org.example.library_on_spring.database.entity.Transaction;
+import org.example.library_on_spring.dto.BookReadDto;
 import org.example.library_on_spring.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -40,5 +41,10 @@ public class TransactionController {
     public ResponseEntity<List<Transaction>> getBookTransactions(@PathVariable Long bookId) {
         List<Transaction> transactions = transactionService.getBookTransactions(bookId);
         return new ResponseEntity<>(transactions, HttpStatus.OK);
+    }
+
+    @GetMapping("/issued")
+    public List<BookReadDto> getIssuedBooks() {
+        return transactionService.getIssuedBooks();
     }
 }

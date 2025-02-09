@@ -46,8 +46,6 @@ public class UserService {
                 .orElseThrow(() -> new RuntimeException("Пользователь не найден"));
     }
 
-
-
     @Transactional
     public UserReadDto create(UserCreateEditDto userDto) {
         return Optional.of(userDto)
