@@ -72,4 +72,17 @@ public class UserService {
     public void delete(Long id) {
         userRepository.deleteById(id);
     }
+
+    public List<User> findByFullName(String firstname, String lastname, String surname) {
+        return userRepository.findByFirstnameContainingIgnoreCaseOrLastnameContainingIgnoreCaseOrSurnameContainingIgnoreCase(
+                firstname, lastname, surname
+        );
+    }
+
+    public List<User> searchUsers(String query) {
+        return userRepository.findByFirstnameContainingIgnoreCaseOrLastnameContainingIgnoreCaseOrSurnameContainingIgnoreCase(
+                query, query, query
+        );
+    }
+
 }

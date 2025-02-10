@@ -25,9 +25,9 @@ public class TransactionController {
 
     @PostMapping("/return")
     public ResponseEntity<Transaction> returnBook(
-            @RequestParam Long userId,
+//            @RequestParam Long userId,
             @RequestParam Long bookId) {
-        Transaction transaction = transactionService.returnBook(userId, bookId);
+        Transaction transaction = transactionService.returnBook(bookId);
         return ResponseEntity.ok(transaction);
     }
 

@@ -18,6 +18,6 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
 
     Optional<Transaction> findByBookAndReturnDateIsNull(Book book);
 
-    @Query("SELECT DISTINCT b FROM Transaction t JOIN t.book b JOIN t.user u")
+    @Query("SELECT DISTINCT b FROM Transaction t  JOIN t.book b JOIN t.user u WHERE t.returnDate IS NULL")
     List<Book> findIssuedBooks();
 }

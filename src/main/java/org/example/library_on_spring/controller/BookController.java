@@ -1,8 +1,9 @@
 package org.example.library_on_spring.controller;
 
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.example.library_on_spring.database.entity.Book;
-import org.example.library_on_spring.dto.BookUpdateDto;
+import org.example.library_on_spring.dto.BookCreateEditDto;
 import org.example.library_on_spring.service.BookService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,13 +35,13 @@ public class BookController {
     }
 
     @PostMapping
-    public ResponseEntity<Book> createBook(@RequestBody Book book) {
-        Book createdBook = bookService.save(book);
-        return new ResponseEntity<>(createdBook, HttpStatus.CREATED);
+    public ResponseEntity<Book> createBook(@RequestBody BookCreateEditDto bookDto) {
+        Book createdBook = bookService.save(bookDto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdBook);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Book> updateBook(@PathVariable Long id, @RequestBody BookUpdateDto bookUpdateDto) {
+    public ResponseEntity<Book> updateBook(@PathVariable Long id, @RequestBody BookCreateEditDto bookUpdateDto) {
         Book updatedBook = bookService.update(id, bookUpdateDto);
         return new ResponseEntity<>(updatedBook, HttpStatus.OK);
     }
@@ -56,5 +57,12 @@ public class BookController {
         List<Book> books = (category == null) ? bookService.findAll() : bookService.findByCategory(category);
         return new ResponseEntity<>(books, HttpStatus.OK);
     }
+
+    @PutMapping("/{bookId}/assign/{userId}")
+    public ResponseEntity<Book> assignBookToUser(@PathVariable Long bookId, @PathVariable Long userId) {
+        Book updatedBook = bookService.assignToUser(bookId, userId);
+        return ResponseEntity.ok(updatedBook);
+    }
+
 
 }

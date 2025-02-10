@@ -1,9 +1,11 @@
 package org.example.library_on_spring.service;
 
+import jakarta.persistence.EntityNotFoundException;
 import org.example.library_on_spring.database.entity.Book;
+import org.example.library_on_spring.database.entity.User;
 import org.example.library_on_spring.database.repository.BookRepository;
+import org.example.library_on_spring.database.repository.UserRepository;
 import org.example.library_on_spring.dto.BookCreateEditDto;
-import org.example.library_on_spring.dto.BookUpdateDto;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,10 +16,13 @@ import java.util.List;
 public class BookService {
 
     private final BookRepository bookRepository;
+    private final UserRepository userRepository;
 
     public BookService(
-            BookRepository bookRepository) {
+            BookRepository bookRepository,
+            UserRepository userRepository) {
         this.bookRepository = bookRepository;
+        this.userRepository = userRepository;
     }
     public List<Book> findAll(){
         return bookRepository.findAll();
@@ -28,16 +33,21 @@ public class BookService {
                 .orElseThrow(() -> new RuntimeException("Книга не найдена " + id));
     }
 
-    public Book save(Book book){
+    public Book save(BookCreateEditDto bookDto){
+        Book book = new Book();
+        book.setTitle(bookDto.title());
+        book.setAuthor(bookDto.author());
+        book.setCategory(bookDto.category());
+        book.setCategoryOrder(Long.valueOf(bookDto.categoryOrder()));
         return bookRepository.save(book);
     }
 
-    public Book update(Long id, BookUpdateDto bookUpdateDto) {
+    public Book update(Long id, BookCreateEditDto bookUpdateDto) {
         Book existingBook = findById(id); // Находим книгу по ID
-        existingBook.setTitle(bookUpdateDto.getTitle());
-        existingBook.setAuthor(bookUpdateDto.getAuthor());
-        existingBook.setCategory(bookUpdateDto.getCategory());
-        existingBook.setCategoryOrder(Long.valueOf(bookUpdateDto.getCategoryOrder()));
+        existingBook.setTitle(bookUpdateDto.title());
+        existingBook.setAuthor(bookUpdateDto.author());
+        existingBook.setCategory(bookUpdateDto.category());
+        existingBook.setCategoryOrder(Long.valueOf(bookUpdateDto.categoryOrder()));
         return bookRepository.save(existingBook); // Сохраняем обновленную книгу
     }
 
@@ -47,6 +57,17 @@ public class BookService {
 
     public List<Book> findByCategory(String category) {
         return bookRepository.findByCategory(category);
+    }
+
+    public Book assignToUser(Long bookId, Long userId) {
+        Book book = bookRepository.findById(bookId)
+                .orElseThrow(() -> new EntityNotFoundException("Книга не найдена"));
+
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new EntityNotFoundException("Пользователь не найден"));
+
+        book.setUser(user);
+        return bookRepository.save(book);
     }
 
 }

@@ -70,9 +70,9 @@ public class TransactionService {
 
 
     @Transactional
-    public Transaction returnBook(Long userId, Long bookId) {
-        User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("Пользователь не найден"));
+    public Transaction returnBook(Long bookId) {
+//        User user = userRepository.findById(userId)
+//                .orElseThrow(() -> new RuntimeException("Пользователь не найден"));
         Book book = bookRepository.findById(bookId)
                 .orElseThrow(() -> new RuntimeException("Книга не найдена"));
         // Получаем активную транзакцию (если она есть)
@@ -84,9 +84,9 @@ public class TransactionService {
         // Получаем транзакцию
         Transaction transaction = activeTransaction.get();
         // Проверяем, что книга была выдана этому пользователю
-        if (!transaction.getUser().getId().equals(userId)) {
-            throw new RuntimeException("Эта книга была выдана другому пользователю");
-        }
+//        if (!transaction.getUser().getId().equals(userId)) {
+//            throw new RuntimeException("Эта книга была выдана другому пользователю");
+//        }
         // Завершаем транзакцию, ставим дату возврата
         transaction.setReturnDate(LocalDateTime.now());
         // Снимаем владельца книги

@@ -1,6 +1,8 @@
 package org.example.library_on_spring.controller;
 
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
+import org.example.library_on_spring.database.entity.User;
 import org.example.library_on_spring.dto.UserCreateEditDto;
 import org.example.library_on_spring.dto.UserReadDto;
 import org.example.library_on_spring.service.UserService;
@@ -27,13 +29,11 @@ public class UserController {
         return ResponseEntity.ok(users);
     }
 
-
     @GetMapping("/{id}")
     public ResponseEntity<UserReadDto> findById(@PathVariable Long id) {
         UserReadDto user = userService.findById(id);
         return ResponseEntity.ok(user);
     }
-
 
     @PostMapping
     public ResponseEntity<UserReadDto> create(@RequestBody UserCreateEditDto userDto) {
@@ -41,17 +41,32 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
     }
 
-
     @PutMapping("/{id}")
     public ResponseEntity<UserReadDto> update(@PathVariable Long id, @RequestBody UserCreateEditDto userDto) {
         UserReadDto updatedUser = userService.update(id, userDto);
         return ResponseEntity.ok(updatedUser);
     }
 
-
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         userService.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @GetMapping("/filter")
+    public ResponseEntity<List<User>> findByFullName(
+            @RequestParam(required = false) String firstname,
+            @RequestParam(required = false) String lastname,
+            @RequestParam(required = false) String surname) {
+
+        List<User> users = userService.findByFullName(firstname, lastname, surname);
+        return new ResponseEntity<>(users, HttpStatus.OK);
+    }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<User>> searchUsers(@RequestParam String query) {
+        List<User> users = userService.searchUsers(query);
+        return new ResponseEntity<>(users, HttpStatus.OK);
+    }
+
 }

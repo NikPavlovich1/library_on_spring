@@ -1,17 +1,13 @@
 package org.example.library_on_spring.dto;
 
-import lombok.Value;
-import lombok.experimental.FieldNameConstants;
+public record BookCreateEditDto(
 
-@Value
-@FieldNameConstants
-public class BookCreateEditDto {
+        String title,
 
-    String title;
+        String author,
 
-    String author;
+        String category,
 
-    String category;
-
-    Long categoryOrder;
+        Integer categoryOrder
+    ) {
 }
