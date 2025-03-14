@@ -15,8 +15,4 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     Long findMaxCategoryOrderByCategory(String category);
 
     List<Book> findByCategory(String category);
-
-    List<Book> findByTitle(String title);
-
-    List<Book> findByAuthor(String author);
 }

@@ -8,6 +8,7 @@ import org.example.library_on_spring.dto.UserReadDto;
 import org.example.library_on_spring.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -36,13 +37,13 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<UserReadDto> create(@RequestBody UserCreateEditDto userDto) {
+    public ResponseEntity<UserReadDto> create(@RequestBody @Validated UserCreateEditDto userDto) {
         UserReadDto createdUser = userService.create(userDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<UserReadDto> update(@PathVariable Long id, @RequestBody UserCreateEditDto userDto) {
+    public ResponseEntity<UserReadDto> update(@PathVariable Long id, @RequestBody @Validated UserCreateEditDto userDto) {
         UserReadDto updatedUser = userService.update(id, userDto);
         return ResponseEntity.ok(updatedUser);
     }

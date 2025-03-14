@@ -41,10 +41,10 @@ public class UserService {
                 .orElseThrow(() -> new RuntimeException("Пользователь не найден " + id));
     }
 
-    public User getUserById(Long userId) {
-        return userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("Пользователь не найден"));
-    }
+//    public User getUserById(Long userId) {
+//        return userRepository.findById(userId)
+//                .orElseThrow(() -> new RuntimeException("Пользователь не найден"));
+//    }
 
     @Transactional
     public UserReadDto create(UserCreateEditDto userDto) {

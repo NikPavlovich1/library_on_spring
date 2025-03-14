@@ -7,6 +7,7 @@ import org.example.library_on_spring.dto.BookCreateEditDto;
 import org.example.library_on_spring.service.BookService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -35,13 +36,13 @@ public class BookController {
     }
 
     @PostMapping
-    public ResponseEntity<Book> createBook(@RequestBody BookCreateEditDto bookDto) {
+    public ResponseEntity<Book> createBook(@RequestBody @Validated BookCreateEditDto bookDto) {
         Book createdBook = bookService.save(bookDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdBook);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Book> updateBook(@PathVariable Long id, @RequestBody BookCreateEditDto bookUpdateDto) {
+    public ResponseEntity<Book> updateBook(@PathVariable Long id, @RequestBody @Validated BookCreateEditDto bookUpdateDto) {
         Book updatedBook = bookService.update(id, bookUpdateDto);
         return new ResponseEntity<>(updatedBook, HttpStatus.OK);
     }
@@ -54,7 +55,32 @@ public class BookController {
 
     @GetMapping("/filter")
     public ResponseEntity<List<Book>> findByCategory(@RequestParam String category) {
-        List<Book> books = (category == null) ? bookService.findAll() : bookService.findByCategory(category);
+        if (category == null) {
+            List<Book> books = bookService.findAll();
+            return new ResponseEntity<>(books, HttpStatus.OK);
+        }
+        List<Book> books = bookService.findByCategory(category);
+        if (books.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(books, HttpStatus.OK);
+    }
+
+    @GetMapping("/filter/title")
+    public ResponseEntity<List<Book>> findByTitle(@RequestParam String title) {
+        List<Book> books = bookService.findByTitle(title);
+        if (books.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(books, HttpStatus.OK);
+    }
+
+    @GetMapping("/filter/author")
+    public ResponseEntity<List<Book>> findByAuthor(@RequestParam String author) {
+        List<Book> books = bookService.findByAuthor(author);
+        if (books.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
         return new ResponseEntity<>(books, HttpStatus.OK);
     }
 
@@ -63,6 +89,4 @@ public class BookController {
         Book updatedBook = bookService.assignToUser(bookId, userId);
         return ResponseEntity.ok(updatedBook);
     }
-
-
 }

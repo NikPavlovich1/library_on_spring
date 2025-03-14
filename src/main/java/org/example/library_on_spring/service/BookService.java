@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+
 @Service
 @Transactional
 public class BookService {
@@ -57,6 +58,14 @@ public class BookService {
 
     public List<Book> findByCategory(String category) {
         return bookRepository.findByCategory(category);
+    }
+
+    public List<Book> findByTitle(String title) {
+        return bookRepository.findByTitle(title);
+    }
+
+    public List<Book> findByAuthor(String author) {
+        return bookRepository.findByAuthor(author);
     }
 
     public Book assignToUser(Long bookId, Long userId) {

@@ -1,275 +1,300 @@
-2025-02-10T13:06:46.580+03:00  INFO 8092 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 8092 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
-2025-02-10T13:06:46.707+03:00  INFO 8092 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
-2025-02-10T13:06:48.295+03:00  INFO 8092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-02-10T13:06:48.392+03:00  INFO 8092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
-2025-02-10T13:06:49.234+03:00  INFO 8092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-10T13:06:49.254+03:00  INFO 8092 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-10T13:06:49.254+03:00  INFO 8092 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2025-02-10T13:06:49.561+03:00  INFO 8092 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-02-10T13:06:49.570+03:00  INFO 8092 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-10T13:06:49.572+03:00  INFO 8092 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2724 ms
-2025-02-10T13:06:49.845+03:00  INFO 8092 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-02-10T13:06:49.965+03:00  INFO 8092 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-02-10T13:06:50.025+03:00  INFO 8092 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-02-10T13:06:50.257+03:00  INFO 8092 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
-2025-02-10T13:06:50.729+03:00  INFO 8092 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-02-10T13:06:50.773+03:00  INFO 8092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-10T13:06:50.983+03:00  INFO 8092 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7f2c995b
-2025-02-10T13:06:50.985+03:00  INFO 8092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-10T13:06:51.526+03:00  INFO 8092 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
-2025-02-10T13:06:51.529+03:00  INFO 8092 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
-2025-02-10T13:06:52.857+03:00 ERROR 8092 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
-2025-02-10T13:06:52.872+03:00  INFO 8092 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-02-10T13:06:53.046+03:00  INFO 8092 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T13:06:53.437+03:00  INFO 8092 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-02-10T13:06:55.535+03:00  INFO 8092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-10T13:06:55.549+03:00  INFO 8092 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 9.843 seconds (process running for 12.029)
-2025-02-10T13:07:27.096+03:00  INFO 8092 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-10T13:07:27.097+03:00  INFO 8092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-10T13:07:27.100+03:00  INFO 8092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2025-02-10T13:07:30.376+03:00  INFO 8092 --- [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1875 ms
-2025-02-10T13:11:07.296+03:00  INFO 8092 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T13:11:07.301+03:00  INFO 8092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-10T13:11:07.316+03:00  INFO 8092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-02-10T13:11:17.562+03:00  INFO 9472 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 9472 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
-2025-02-10T13:11:17.566+03:00  INFO 9472 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
-2025-02-10T13:11:18.771+03:00  INFO 9472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-02-10T13:11:18.863+03:00  INFO 9472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 3 JPA repository interfaces.
-2025-02-10T13:11:19.559+03:00  INFO 9472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-10T13:11:19.578+03:00  INFO 9472 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-10T13:11:19.579+03:00  INFO 9472 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2025-02-10T13:11:19.830+03:00  INFO 9472 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-02-10T13:11:19.835+03:00  INFO 9472 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-10T13:11:19.836+03:00  INFO 9472 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2190 ms
-2025-02-10T13:11:20.056+03:00  INFO 9472 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-02-10T13:11:20.164+03:00  INFO 9472 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-02-10T13:11:20.214+03:00  INFO 9472 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-02-10T13:11:20.349+03:00  INFO 9472 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
-2025-02-10T13:11:20.713+03:00  INFO 9472 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-02-10T13:11:20.751+03:00  INFO 9472 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-10T13:11:20.938+03:00  INFO 9472 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@369ad7da
-2025-02-10T13:11:20.941+03:00  INFO 9472 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-10T13:11:21.454+03:00  INFO 9472 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
-2025-02-10T13:11:21.457+03:00  INFO 9472 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
-2025-02-10T13:11:22.973+03:00 ERROR 9472 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
-2025-02-10T13:11:22.985+03:00  INFO 9472 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-02-10T13:11:23.185+03:00  INFO 9472 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T13:11:23.540+03:00  INFO 9472 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-02-10T13:11:25.420+03:00  INFO 9472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-10T13:11:25.432+03:00  INFO 9472 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 8.679 seconds (process running for 9.931)
-2025-02-10T13:11:28.651+03:00  INFO 9472 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-10T13:11:28.652+03:00  INFO 9472 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-10T13:11:28.659+03:00  INFO 9472 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2025-02-10T13:11:30.874+03:00  INFO 9472 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1526 ms
-2025-02-10T13:18:06.588+03:00  INFO 9472 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T13:18:06.596+03:00  INFO 9472 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-10T13:18:06.625+03:00  INFO 9472 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-02-10T13:19:08.904+03:00  INFO 3908 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 3908 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
-2025-02-10T13:19:08.907+03:00  INFO 3908 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
-2025-02-10T13:19:10.073+03:00  INFO 3908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-02-10T13:19:10.175+03:00  INFO 3908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 3 JPA repository interfaces.
-2025-02-10T13:19:10.931+03:00  INFO 3908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-10T13:19:10.951+03:00  INFO 3908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-10T13:19:10.952+03:00  INFO 3908 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2025-02-10T13:19:11.283+03:00  INFO 3908 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-02-10T13:19:11.290+03:00  INFO 3908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-10T13:19:11.290+03:00  INFO 3908 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2310 ms
-2025-02-10T13:19:11.536+03:00  INFO 3908 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-02-10T13:19:11.637+03:00  INFO 3908 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-02-10T13:19:11.684+03:00  INFO 3908 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-02-10T13:19:11.947+03:00  INFO 3908 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
-2025-02-10T13:19:12.287+03:00  INFO 3908 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-02-10T13:19:12.329+03:00  INFO 3908 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-10T13:19:12.566+03:00  INFO 3908 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@ba562e0
-2025-02-10T13:19:12.570+03:00  INFO 3908 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-10T13:19:13.066+03:00  INFO 3908 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
-2025-02-10T13:19:13.069+03:00  INFO 3908 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
-2025-02-10T13:19:14.588+03:00 ERROR 3908 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
-2025-02-10T13:19:14.601+03:00  INFO 3908 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-02-10T13:19:14.777+03:00  INFO 3908 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T13:19:15.124+03:00  INFO 3908 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-02-10T13:19:17.006+03:00  INFO 3908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-10T13:19:17.022+03:00  INFO 3908 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 8.913 seconds (process running for 10.156)
-2025-02-10T13:19:23.385+03:00  INFO 3908 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-10T13:19:23.385+03:00  INFO 3908 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-10T13:19:23.387+03:00  INFO 3908 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-02-10T13:19:24.637+03:00  INFO 3908 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 818 ms
-2025-02-10T13:26:33.066+03:00  INFO 3908 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T13:26:33.072+03:00  INFO 3908 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-10T13:26:33.091+03:00  INFO 3908 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-02-10T13:26:38.908+03:00  INFO 8340 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 8340 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
-2025-02-10T13:26:38.911+03:00  INFO 8340 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
-2025-02-10T13:26:40.128+03:00  INFO 8340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-02-10T13:26:40.218+03:00  INFO 8340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 3 JPA repository interfaces.
-2025-02-10T13:26:40.887+03:00  INFO 8340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-10T13:26:40.907+03:00  INFO 8340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-10T13:26:40.907+03:00  INFO 8340 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2025-02-10T13:26:41.159+03:00  INFO 8340 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-02-10T13:26:41.170+03:00  INFO 8340 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-10T13:26:41.171+03:00  INFO 8340 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2187 ms
-2025-02-10T13:26:41.392+03:00  INFO 8340 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-02-10T13:26:41.515+03:00  INFO 8340 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-02-10T13:26:41.562+03:00  INFO 8340 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-02-10T13:26:41.691+03:00  INFO 8340 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
-2025-02-10T13:26:42.116+03:00  INFO 8340 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-02-10T13:26:42.154+03:00  INFO 8340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-10T13:26:42.387+03:00  INFO 8340 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@38ef1a0a
-2025-02-10T13:26:42.391+03:00  INFO 8340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-10T13:26:42.884+03:00  INFO 8340 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
-2025-02-10T13:26:42.887+03:00  INFO 8340 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
-2025-02-10T13:26:44.345+03:00 ERROR 8340 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
-2025-02-10T13:26:44.367+03:00  INFO 8340 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-02-10T13:26:44.630+03:00  INFO 8340 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T13:26:45.098+03:00  INFO 8340 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-02-10T13:26:46.791+03:00  INFO 8340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-10T13:26:46.803+03:00  INFO 8340 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 8.735 seconds (process running for 9.909)
-2025-02-10T13:26:53.070+03:00  INFO 8340 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-10T13:26:53.071+03:00  INFO 8340 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-10T13:26:53.075+03:00  INFO 8340 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2025-02-10T13:26:54.611+03:00  INFO 8340 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 865 ms
-2025-02-10T13:30:53.931+03:00  INFO 8340 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T13:30:54.374+03:00  INFO 8340 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-10T13:30:54.973+03:00  INFO 8340 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-02-10T13:43:16.992+03:00  INFO 11084 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 11084 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
-2025-02-10T13:43:16.997+03:00  INFO 11084 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
-2025-02-10T13:43:18.204+03:00  INFO 11084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-02-10T13:43:18.321+03:00  INFO 11084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 3 JPA repository interfaces.
-2025-02-10T13:43:19.066+03:00  INFO 11084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-10T13:43:19.086+03:00  INFO 11084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-10T13:43:19.086+03:00  INFO 11084 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2025-02-10T13:43:19.351+03:00  INFO 11084 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-02-10T13:43:19.360+03:00  INFO 11084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-10T13:43:19.361+03:00  INFO 11084 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2290 ms
-2025-02-10T13:43:19.569+03:00  INFO 11084 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-02-10T13:43:19.693+03:00  INFO 11084 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-02-10T13:43:19.755+03:00  INFO 11084 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-02-10T13:43:19.893+03:00  INFO 11084 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
-2025-02-10T13:43:20.254+03:00  INFO 11084 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-02-10T13:43:20.299+03:00  INFO 11084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-10T13:43:20.547+03:00  INFO 11084 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@336d28a1
-2025-02-10T13:43:20.552+03:00  INFO 11084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-10T13:43:21.042+03:00  INFO 11084 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
-2025-02-10T13:43:21.044+03:00  INFO 11084 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
-2025-02-10T13:43:22.438+03:00 ERROR 11084 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
-2025-02-10T13:43:22.452+03:00  INFO 11084 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-02-10T13:43:22.622+03:00  INFO 11084 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T13:43:23.049+03:00  INFO 11084 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-02-10T13:43:24.945+03:00  INFO 11084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-10T13:43:24.964+03:00  INFO 11084 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 8.781 seconds (process running for 12.25)
-2025-02-10T13:43:56.814+03:00  INFO 11084 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-10T13:43:56.814+03:00  INFO 11084 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-10T13:43:56.821+03:00  INFO 11084 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2025-02-10T13:43:59.013+03:00  INFO 11084 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1347 ms
-2025-02-10T14:00:04.394+03:00  INFO 11084 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T14:00:04.569+03:00  INFO 11084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-10T14:00:04.629+03:00  INFO 11084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-02-10T14:08:16.301+03:00  INFO 13480 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 13480 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
-2025-02-10T14:08:16.305+03:00  INFO 13480 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
-2025-02-10T14:08:17.527+03:00  INFO 13480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-02-10T14:08:17.628+03:00  INFO 13480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 3 JPA repository interfaces.
-2025-02-10T14:08:18.410+03:00  INFO 13480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-10T14:08:18.431+03:00  INFO 13480 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-10T14:08:18.432+03:00  INFO 13480 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2025-02-10T14:08:18.691+03:00  INFO 13480 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-02-10T14:08:18.697+03:00  INFO 13480 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-10T14:08:18.698+03:00  INFO 13480 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2320 ms
-2025-02-10T14:08:18.907+03:00  INFO 13480 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-02-10T14:08:19.018+03:00  INFO 13480 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-02-10T14:08:19.065+03:00  INFO 13480 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-02-10T14:08:19.193+03:00  INFO 13480 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
-2025-02-10T14:08:19.543+03:00  INFO 13480 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-02-10T14:08:19.590+03:00  INFO 13480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-10T14:08:19.776+03:00  INFO 13480 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2b1a901d
-2025-02-10T14:08:19.781+03:00  INFO 13480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-10T14:08:20.277+03:00  INFO 13480 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
-2025-02-10T14:08:20.282+03:00  INFO 13480 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
-2025-02-10T14:08:21.633+03:00 ERROR 13480 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
-2025-02-10T14:08:21.650+03:00  INFO 13480 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-02-10T14:08:21.810+03:00  INFO 13480 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T14:08:22.146+03:00  INFO 13480 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-02-10T14:08:23.843+03:00  INFO 13480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-10T14:08:23.855+03:00  INFO 13480 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 8.52 seconds (process running for 9.717)
-2025-02-10T14:08:37.680+03:00  INFO 13480 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-10T14:08:37.680+03:00  INFO 13480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-10T14:08:37.682+03:00  INFO 13480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-02-10T14:08:39.046+03:00  INFO 13480 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 959 ms
-2025-02-10T14:09:21.750+03:00  WARN 13480 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.example.library_on_spring.dto.UserReadDto> org.example.library_on_spring.controller.UserController.create(org.example.library_on_spring.dto.UserCreateEditDto) with 2 errors: [Field error in object 'userCreateEditDto' on field 'firstname': rejected value []; codes [NotBlank.userCreateEditDto.firstname,NotBlank.firstname,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname]]; default message [Имя не может быть пустым]] [Field error in object 'userCreateEditDto' on field 'firstname': rejected value []; codes [Pattern.userCreateEditDto.firstname,Pattern.firstname,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname],[Ljakarta.validation.constraints.Pattern$Flag;@1bd121ee,^[А-Яа-яЁёA-Za-z]+$]; default message [Имя должно содержать только буквы]] ]
-2025-02-10T14:10:39.501+03:00  INFO 13480 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T14:10:39.509+03:00  INFO 13480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-10T14:10:39.549+03:00  INFO 13480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-02-10T14:10:47.210+03:00  INFO 14464 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 14464 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
-2025-02-10T14:10:47.213+03:00  INFO 14464 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
-2025-02-10T14:10:48.498+03:00  INFO 14464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-02-10T14:10:48.616+03:00  INFO 14464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 3 JPA repository interfaces.
-2025-02-10T14:10:49.299+03:00  INFO 14464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-10T14:10:49.318+03:00  INFO 14464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-10T14:10:49.319+03:00  INFO 14464 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2025-02-10T14:10:49.573+03:00  INFO 14464 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-02-10T14:10:49.578+03:00  INFO 14464 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-10T14:10:49.578+03:00  INFO 14464 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2288 ms
-2025-02-10T14:10:49.782+03:00  INFO 14464 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-02-10T14:10:49.892+03:00  INFO 14464 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-02-10T14:10:49.942+03:00  INFO 14464 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-02-10T14:10:50.126+03:00  INFO 14464 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
-2025-02-10T14:10:50.576+03:00  INFO 14464 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-02-10T14:10:50.629+03:00  INFO 14464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-10T14:10:50.821+03:00  INFO 14464 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@34cf0e80
-2025-02-10T14:10:50.824+03:00  INFO 14464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-10T14:10:51.309+03:00  INFO 14464 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
-2025-02-10T14:10:51.311+03:00  INFO 14464 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
-2025-02-10T14:10:52.681+03:00 ERROR 14464 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
-2025-02-10T14:10:52.706+03:00  INFO 14464 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-02-10T14:10:52.939+03:00  INFO 14464 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T14:10:53.330+03:00  INFO 14464 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-02-10T14:10:54.977+03:00  INFO 14464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-10T14:10:54.988+03:00  INFO 14464 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 8.581 seconds (process running for 9.642)
-2025-02-10T14:10:58.051+03:00  INFO 14464 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-10T14:10:58.052+03:00  INFO 14464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-10T14:10:58.054+03:00  INFO 14464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-02-10T14:10:59.276+03:00  INFO 14464 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 799 ms
-2025-02-10T14:11:26.763+03:00  WARN 14464 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.example.library_on_spring.dto.UserReadDto> org.example.library_on_spring.controller.UserController.create(org.example.library_on_spring.dto.UserCreateEditDto): [Field error in object 'userCreateEditDto' on field 'firstname': rejected value [ ]; codes [NotBlank.userCreateEditDto.firstname,NotBlank.firstname,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname]]; default message [Имя не может быть пустым]] ]
-2025-02-10T14:12:49.925+03:00  WARN 14464 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23514
-2025-02-10T14:12:49.926+03:00 ERROR 14464 --- [http-nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: new row for relation "books" violates check constraint "books_category_check"
-  Подробности: Failing row contains (16, , , , 0, -0, null).
-2025-02-10T14:13:07.865+03:00  WARN 14464 --- [http-nio-8080-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23514
-2025-02-10T14:13:07.865+03:00 ERROR 14464 --- [http-nio-8080-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: new row for relation "books" violates check constraint "books_category_check"
-  Подробности: Failing row contains (17, bebeb, , , 0, -0, null).
-2025-02-10T14:13:18.243+03:00  WARN 14464 --- [http-nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23514
-2025-02-10T14:13:18.243+03:00 ERROR 14464 --- [http-nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: new row for relation "books" violates check constraint "books_category_check"
-  Подробности: Failing row contains (18, bebeb, aguagu, , 0, -0, null).
-2025-02-10T14:26:14.347+03:00  INFO 14464 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T14:26:14.355+03:00  INFO 14464 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-10T14:26:14.371+03:00  INFO 14464 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-02-10T14:36:28.994+03:00  INFO 14128 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 14128 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
-2025-02-10T14:36:28.999+03:00  INFO 14128 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
-2025-02-10T14:36:30.200+03:00  INFO 14128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-02-10T14:36:30.320+03:00  INFO 14128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 3 JPA repository interfaces.
-2025-02-10T14:36:31.015+03:00  INFO 14128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-10T14:36:31.035+03:00  INFO 14128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-10T14:36:31.036+03:00  INFO 14128 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2025-02-10T14:36:31.294+03:00  INFO 14128 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-02-10T14:36:31.300+03:00  INFO 14128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-10T14:36:31.301+03:00  INFO 14128 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2232 ms
-2025-02-10T14:36:31.531+03:00  INFO 14128 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-02-10T14:36:31.650+03:00  INFO 14128 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-02-10T14:36:31.724+03:00  INFO 14128 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-02-10T14:36:31.911+03:00  INFO 14128 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
-2025-02-10T14:36:32.409+03:00  INFO 14128 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-02-10T14:36:32.456+03:00  INFO 14128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-10T14:36:32.672+03:00  INFO 14128 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@621dc63d
-2025-02-10T14:36:32.677+03:00  INFO 14128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-10T14:36:33.174+03:00  INFO 14128 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
-2025-02-10T14:36:33.178+03:00  INFO 14128 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
-2025-02-10T14:36:34.780+03:00 ERROR 14128 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
-2025-02-10T14:36:34.797+03:00  INFO 14128 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-02-10T14:36:35.000+03:00  INFO 14128 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T14:36:35.446+03:00  INFO 14128 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-02-10T14:36:37.460+03:00  INFO 14128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-10T14:36:37.482+03:00  INFO 14128 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 9.253 seconds (process running for 10.206)
-2025-02-10T14:36:40.852+03:00  INFO 14128 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-10T14:36:40.852+03:00  INFO 14128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-10T14:36:40.854+03:00  INFO 14128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-02-10T14:36:42.247+03:00  INFO 14128 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 927 ms
-2025-02-10T14:39:32.069+03:00  INFO 14128 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-02-10T14:39:32.073+03:00  INFO 14128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-10T14:39:32.937+03:00  INFO 14128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-14T12:39:49.703+03:00  INFO 13504 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 13504 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
+2025-03-14T12:39:49.718+03:00  INFO 13504 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
+2025-03-14T12:39:51.273+03:00  INFO 13504 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-14T12:39:51.367+03:00  INFO 13504 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 3 JPA repository interfaces.
+2025-03-14T12:39:52.159+03:00  INFO 13504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-14T12:39:52.183+03:00  INFO 13504 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-14T12:39:52.183+03:00  INFO 13504 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-03-14T12:39:52.472+03:00  INFO 13504 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-03-14T12:39:52.479+03:00  INFO 13504 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-14T12:39:52.480+03:00  INFO 13504 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2623 ms
+2025-03-14T12:39:53.038+03:00  INFO 13504 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-14T12:39:53.329+03:00  INFO 13504 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-03-14T12:39:53.392+03:00  INFO 13504 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-14T12:39:53.555+03:00  INFO 13504 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2025-03-14T12:39:53.935+03:00  INFO 13504 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-14T12:39:53.981+03:00  INFO 13504 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-14T12:39:54.466+03:00  INFO 13504 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@62ab5e63
+2025-03-14T12:39:54.470+03:00  INFO 13504 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-14T12:39:56.359+03:00  INFO 13504 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
+2025-03-14T12:39:56.362+03:00  INFO 13504 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
+2025-03-14T12:40:00.145+03:00 ERROR 13504 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2025-03-14T12:40:00.205+03:00  INFO 13504 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-14T12:40:00.580+03:00  INFO 13504 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T12:40:01.558+03:00  INFO 13504 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-14T12:40:03.263+03:00  INFO 13504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-14T12:40:03.275+03:00  INFO 13504 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 14.52 seconds (process running for 16.247)
+2025-03-14T12:40:19.206+03:00  INFO 13504 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-14T12:40:19.206+03:00  INFO 13504 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-14T12:40:19.208+03:00  INFO 13504 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-14T12:40:20.324+03:00  INFO 13504 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 763 ms
+2025-03-14T12:41:33.300+03:00  WARN 13504 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.example.library_on_spring.dto.UserReadDto> org.example.library_on_spring.controller.UserController.create(org.example.library_on_spring.dto.UserCreateEditDto) with 3 errors: [Field error in object 'userCreateEditDto' on field 'firstname': rejected value [K]; codes [Size.userCreateEditDto.firstname,Size.firstname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname],50,2]; default message [Длина имени должна быть не менее 2 и не более 50 символов]] [Field error in object 'userCreateEditDto' on field 'createdAt': rejected value [2025-03-15]; codes [PastOrPresent.userCreateEditDto.createdAt,PastOrPresent.createdAt,PastOrPresent.java.time.LocalDate,PastOrPresent]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.createdAt,createdAt]; arguments []; default message [createdAt]]; default message [должно содержать прошедшую дату или сегодняшнее число]] [Field error in object 'userCreateEditDto' on field 'lastname': rejected value [B]; codes [Size.userCreateEditDto.lastname,Size.lastname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.lastname,lastname]; arguments []; default message [lastname],50,2]; default message [Длина фамилии должна быть не менее 2 и не более 50 символов]] ]
+2025-03-14T12:42:01.362+03:00  WARN 13504 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.example.library_on_spring.dto.UserReadDto> org.example.library_on_spring.controller.UserController.create(org.example.library_on_spring.dto.UserCreateEditDto) with 2 errors: [Field error in object 'userCreateEditDto' on field 'lastname': rejected value [B]; codes [Size.userCreateEditDto.lastname,Size.lastname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.lastname,lastname]; arguments []; default message [lastname],50,2]; default message [Длина фамилии должна быть не менее 2 и не более 50 символов]] [Field error in object 'userCreateEditDto' on field 'firstname': rejected value [K]; codes [Size.userCreateEditDto.firstname,Size.firstname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname],50,2]; default message [Длина имени должна быть не менее 2 и не более 50 символов]] ]
+2025-03-14T12:56:48.669+03:00  INFO 13504 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T12:56:48.673+03:00  INFO 13504 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-14T12:56:48.679+03:00  INFO 13504 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-14T12:56:56.676+03:00  INFO 15844 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 15844 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
+2025-03-14T12:56:56.681+03:00  INFO 15844 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
+2025-03-14T12:56:58.155+03:00  INFO 15844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-14T12:56:58.244+03:00  INFO 15844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 3 JPA repository interfaces.
+2025-03-14T12:56:59.094+03:00  INFO 15844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-14T12:56:59.113+03:00  INFO 15844 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-14T12:56:59.113+03:00  INFO 15844 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-03-14T12:56:59.464+03:00  INFO 15844 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-03-14T12:56:59.470+03:00  INFO 15844 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-14T12:56:59.471+03:00  INFO 15844 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2449 ms
+2025-03-14T12:56:59.742+03:00  INFO 15844 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-14T12:56:59.844+03:00  INFO 15844 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-03-14T12:56:59.891+03:00  INFO 15844 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-14T12:57:00.041+03:00  INFO 15844 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2025-03-14T12:57:00.400+03:00  INFO 15844 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-14T12:57:00.444+03:00  INFO 15844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-14T12:57:00.655+03:00  INFO 15844 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6068ebb2
+2025-03-14T12:57:00.660+03:00  INFO 15844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-14T12:57:01.118+03:00  INFO 15844 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
+2025-03-14T12:57:01.120+03:00  INFO 15844 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
+2025-03-14T12:57:02.520+03:00 ERROR 15844 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2025-03-14T12:57:02.535+03:00  INFO 15844 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-14T12:57:02.710+03:00  INFO 15844 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T12:57:03.132+03:00  INFO 15844 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-14T12:57:04.692+03:00  INFO 15844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-14T12:57:04.703+03:00  INFO 15844 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 9.015 seconds (process running for 10.494)
+2025-03-14T12:57:09.619+03:00  INFO 15844 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-14T12:57:09.620+03:00  INFO 15844 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-14T12:57:09.621+03:00  INFO 15844 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-14T12:57:10.757+03:00  INFO 15844 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 763 ms
+2025-03-14T12:58:13.264+03:00  INFO 15844 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T12:58:13.269+03:00  INFO 15844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-14T12:58:13.277+03:00  INFO 15844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-14T12:58:25.057+03:00  INFO 13880 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 13880 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
+2025-03-14T12:58:25.060+03:00  INFO 13880 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
+2025-03-14T12:58:26.260+03:00  INFO 13880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-14T12:58:26.346+03:00  INFO 13880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 3 JPA repository interfaces.
+2025-03-14T12:58:27.004+03:00  INFO 13880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-14T12:58:27.022+03:00  INFO 13880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-14T12:58:27.022+03:00  INFO 13880 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-03-14T12:58:27.252+03:00  INFO 13880 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-03-14T12:58:27.257+03:00  INFO 13880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-14T12:58:27.258+03:00  INFO 13880 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2108 ms
+2025-03-14T12:58:27.446+03:00  INFO 13880 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-14T12:58:27.563+03:00  INFO 13880 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-03-14T12:58:27.609+03:00  INFO 13880 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-14T12:58:27.725+03:00  INFO 13880 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2025-03-14T12:58:28.079+03:00  INFO 13880 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-14T12:58:28.117+03:00  INFO 13880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-14T12:58:28.295+03:00  INFO 13880 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c815fdc
+2025-03-14T12:58:28.300+03:00  INFO 13880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-14T12:58:28.750+03:00  INFO 13880 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
+2025-03-14T12:58:28.752+03:00  INFO 13880 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
+2025-03-14T12:58:29.981+03:00 ERROR 13880 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2025-03-14T12:58:29.993+03:00  INFO 13880 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-14T12:58:30.144+03:00  INFO 13880 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T12:58:30.531+03:00  INFO 13880 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-14T12:58:32.011+03:00  INFO 13880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-14T12:58:32.022+03:00  INFO 13880 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 7.737 seconds (process running for 8.965)
+2025-03-14T12:58:39.816+03:00  INFO 13880 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-14T12:58:39.816+03:00  INFO 13880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-14T12:58:39.817+03:00  INFO 13880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-14T12:58:40.759+03:00  INFO 13880 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 639 ms
+2025-03-14T12:59:32.749+03:00  WARN 13880 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.example.library_on_spring.dto.UserReadDto> org.example.library_on_spring.controller.UserController.create(org.example.library_on_spring.dto.UserCreateEditDto) with 2 errors: [Field error in object 'userCreateEditDto' on field 'firstname': rejected value [И]; codes [Size.userCreateEditDto.firstname,Size.firstname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname],50,2]; default message [Длина имени должна быть не менее 2 и не более 50 символов]] [Field error in object 'userCreateEditDto' on field 'lastname': rejected value [И]; codes [Size.userCreateEditDto.lastname,Size.lastname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.lastname,lastname]; arguments []; default message [lastname],50,2]; default message [Длина фамилии должна быть не менее 2 и не более 50 символов]] ]
+2025-03-14T13:06:30.970+03:00  WARN 13880 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.example.library_on_spring.dto.UserReadDto> org.example.library_on_spring.controller.UserController.create(org.example.library_on_spring.dto.UserCreateEditDto) with 2 errors: [Field error in object 'userCreateEditDto' on field 'lastname': rejected value [И]; codes [Size.userCreateEditDto.lastname,Size.lastname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.lastname,lastname]; arguments []; default message [lastname],50,2]; default message [Длина фамилии должна быть не менее 2 и не более 50 символов]] [Field error in object 'userCreateEditDto' on field 'firstname': rejected value [b]; codes [Size.userCreateEditDto.firstname,Size.firstname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname],50,2]; default message [Длина имени должна быть не менее 2 и не более 50 символов]] ]
+2025-03-14T13:07:06.839+03:00  INFO 13880 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T13:07:06.843+03:00  INFO 13880 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-14T13:07:06.858+03:00  INFO 13880 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-14T13:07:12.966+03:00  INFO 15208 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 15208 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
+2025-03-14T13:07:12.970+03:00  INFO 15208 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
+2025-03-14T13:07:14.148+03:00  INFO 15208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-14T13:07:14.238+03:00  INFO 15208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 3 JPA repository interfaces.
+2025-03-14T13:07:14.906+03:00  INFO 15208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-14T13:07:14.923+03:00  INFO 15208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-14T13:07:14.925+03:00  INFO 15208 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-03-14T13:07:15.149+03:00  INFO 15208 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-03-14T13:07:15.155+03:00  INFO 15208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-14T13:07:15.155+03:00  INFO 15208 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2100 ms
+2025-03-14T13:07:15.347+03:00  INFO 15208 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-14T13:07:15.455+03:00  INFO 15208 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-03-14T13:07:15.498+03:00  INFO 15208 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-14T13:07:15.620+03:00  INFO 15208 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2025-03-14T13:07:15.952+03:00  INFO 15208 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-14T13:07:15.989+03:00  INFO 15208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-14T13:07:16.199+03:00  INFO 15208 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4fa5cc73
+2025-03-14T13:07:16.203+03:00  INFO 15208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-14T13:07:16.696+03:00  INFO 15208 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
+2025-03-14T13:07:16.697+03:00  INFO 15208 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
+2025-03-14T13:07:17.888+03:00 ERROR 15208 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2025-03-14T13:07:17.901+03:00  INFO 15208 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-14T13:07:18.048+03:00  INFO 15208 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T13:07:18.442+03:00  INFO 15208 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-14T13:07:21.345+03:00  INFO 15208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-14T13:07:21.430+03:00  INFO 15208 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 9.294 seconds (process running for 10.445)
+2025-03-14T13:07:23.838+03:00  INFO 15208 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-14T13:07:23.838+03:00  INFO 15208 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-14T13:07:23.839+03:00  INFO 15208 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-14T13:07:25.069+03:00  INFO 15208 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 879 ms
+2025-03-14T13:07:42.887+03:00  WARN 15208 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.example.library_on_spring.dto.UserReadDto> org.example.library_on_spring.controller.UserController.create(org.example.library_on_spring.dto.UserCreateEditDto) with 2 errors: [Field error in object 'userCreateEditDto' on field 'lastname': rejected value [И]; codes [Size.userCreateEditDto.lastname,Size.lastname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.lastname,lastname]; arguments []; default message [lastname],50,2]; default message [Длина фамилии должна быть не менее 2 и не более 50 символов]] [Field error in object 'userCreateEditDto' on field 'firstname': rejected value [И]; codes [Size.userCreateEditDto.firstname,Size.firstname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname],50,2]; default message [Длина имени должна быть не менее 2 и не более 50 символов]] ]
+2025-03-14T13:08:59.845+03:00  INFO 15208 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T13:08:59.849+03:00  INFO 15208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-14T13:08:59.860+03:00  INFO 15208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-14T13:09:06.384+03:00  INFO 6232 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 6232 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
+2025-03-14T13:09:06.388+03:00  INFO 6232 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
+2025-03-14T13:09:07.552+03:00  INFO 6232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-14T13:09:07.641+03:00  INFO 6232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 3 JPA repository interfaces.
+2025-03-14T13:09:08.332+03:00  INFO 6232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-14T13:09:08.349+03:00  INFO 6232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-14T13:09:08.350+03:00  INFO 6232 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-03-14T13:09:08.573+03:00  INFO 6232 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-03-14T13:09:08.579+03:00  INFO 6232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-14T13:09:08.580+03:00  INFO 6232 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2104 ms
+2025-03-14T13:09:08.763+03:00  INFO 6232 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-14T13:09:08.868+03:00  INFO 6232 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-03-14T13:09:08.913+03:00  INFO 6232 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-14T13:09:09.024+03:00  INFO 6232 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2025-03-14T13:09:09.336+03:00  INFO 6232 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-14T13:09:09.373+03:00  INFO 6232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-14T13:09:09.547+03:00  INFO 6232 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c2a7d53
+2025-03-14T13:09:09.549+03:00  INFO 6232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-14T13:09:09.988+03:00  INFO 6232 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
+2025-03-14T13:09:09.992+03:00  INFO 6232 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
+2025-03-14T13:09:11.210+03:00 ERROR 6232 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2025-03-14T13:09:11.224+03:00  INFO 6232 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-14T13:09:11.371+03:00  INFO 6232 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T13:09:11.693+03:00  INFO 6232 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-14T13:09:14.625+03:00  INFO 6232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-14T13:09:14.637+03:00  INFO 6232 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 9.084 seconds (process running for 10.271)
+2025-03-14T13:09:17.369+03:00  INFO 6232 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-14T13:09:17.369+03:00  INFO 6232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-14T13:09:17.371+03:00  INFO 6232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-14T13:09:18.412+03:00  INFO 6232 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 704 ms
+2025-03-14T13:09:29.138+03:00  WARN 6232 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.example.library_on_spring.dto.UserReadDto> org.example.library_on_spring.controller.UserController.create(org.example.library_on_spring.dto.UserCreateEditDto): [Field error in object 'userCreateEditDto' on field 'firstname': rejected value [И]; codes [Size.userCreateEditDto.firstname,Size.firstname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname],50,2]; default message [Длина имени должна быть не менее 2 и не более 50 символов]] ]
+2025-03-14T13:12:18.914+03:00  INFO 6232 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T13:12:18.918+03:00  INFO 6232 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-14T13:12:18.930+03:00  INFO 6232 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-14T13:12:26.899+03:00  INFO 8036 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 8036 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
+2025-03-14T13:12:26.902+03:00  INFO 8036 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
+2025-03-14T13:12:28.190+03:00  INFO 8036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-14T13:12:28.278+03:00  INFO 8036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+2025-03-14T13:12:28.963+03:00  INFO 8036 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-14T13:12:28.983+03:00  INFO 8036 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-14T13:12:28.983+03:00  INFO 8036 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-03-14T13:12:29.207+03:00  INFO 8036 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-03-14T13:12:29.213+03:00  INFO 8036 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-14T13:12:29.213+03:00  INFO 8036 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2232 ms
+2025-03-14T13:12:29.431+03:00  INFO 8036 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-14T13:12:29.527+03:00  INFO 8036 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-03-14T13:12:29.572+03:00  INFO 8036 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-14T13:12:29.700+03:00  INFO 8036 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2025-03-14T13:12:30.007+03:00  INFO 8036 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-14T13:12:30.046+03:00  INFO 8036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-14T13:12:30.236+03:00  INFO 8036 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@54275b5d
+2025-03-14T13:12:30.238+03:00  INFO 8036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-14T13:12:30.695+03:00  INFO 8036 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
+2025-03-14T13:12:30.698+03:00  INFO 8036 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
+2025-03-14T13:12:31.896+03:00 ERROR 8036 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2025-03-14T13:12:31.910+03:00  INFO 8036 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-14T13:12:32.053+03:00  INFO 8036 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T13:12:32.440+03:00  INFO 8036 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-14T13:12:34.639+03:00  INFO 8036 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-14T13:12:34.661+03:00  INFO 8036 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 8.572 seconds (process running for 9.797)
+2025-03-14T13:12:36.793+03:00  INFO 8036 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-14T13:12:36.793+03:00  INFO 8036 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-14T13:12:36.794+03:00  INFO 8036 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-14T13:12:37.891+03:00  INFO 8036 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 730 ms
+2025-03-14T13:23:21.560+03:00  INFO 8036 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T13:23:21.565+03:00  INFO 8036 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-14T13:23:21.576+03:00  INFO 8036 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-14T13:30:34.516+03:00  INFO 12316 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 12316 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
+2025-03-14T13:30:34.523+03:00  INFO 12316 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
+2025-03-14T13:30:36.777+03:00  INFO 12316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-14T13:30:36.939+03:00  INFO 12316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 152 ms. Found 3 JPA repository interfaces.
+2025-03-14T13:30:37.927+03:00  INFO 12316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-14T13:30:37.976+03:00  INFO 12316 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-14T13:30:37.976+03:00  INFO 12316 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-03-14T13:30:38.303+03:00  INFO 12316 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-03-14T13:30:38.309+03:00  INFO 12316 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-14T13:30:38.310+03:00  INFO 12316 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3581 ms
+2025-03-14T13:30:38.648+03:00  INFO 12316 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-14T13:30:38.755+03:00  INFO 12316 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-03-14T13:30:38.804+03:00  INFO 12316 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-14T13:30:38.949+03:00  INFO 12316 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2025-03-14T13:30:39.387+03:00  INFO 12316 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-14T13:30:39.430+03:00  INFO 12316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-14T13:30:39.717+03:00  INFO 12316 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@45f1413c
+2025-03-14T13:30:39.723+03:00  INFO 12316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-14T13:30:40.365+03:00  INFO 12316 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
+2025-03-14T13:30:40.368+03:00  INFO 12316 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
+2025-03-14T13:30:41.615+03:00 ERROR 12316 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2025-03-14T13:30:41.629+03:00  INFO 12316 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-14T13:30:41.783+03:00  INFO 12316 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T13:30:42.215+03:00  INFO 12316 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-14T13:30:44.367+03:00  INFO 12316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-14T13:30:44.382+03:00  INFO 12316 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 11.645 seconds (process running for 13.935)
+2025-03-14T13:31:41.789+03:00  INFO 12316 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T13:31:41.793+03:00  INFO 12316 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-14T13:31:41.810+03:00  INFO 12316 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-14T13:31:46.721+03:00  INFO 17060 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 17060 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
+2025-03-14T13:31:46.725+03:00  INFO 17060 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
+2025-03-14T13:31:48.031+03:00  INFO 17060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-14T13:31:48.123+03:00  INFO 17060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 3 JPA repository interfaces.
+2025-03-14T13:31:48.850+03:00  INFO 17060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-14T13:31:48.868+03:00  INFO 17060 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-14T13:31:48.870+03:00  INFO 17060 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-03-14T13:31:49.112+03:00  INFO 17060 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-03-14T13:31:49.119+03:00  INFO 17060 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-14T13:31:49.120+03:00  INFO 17060 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2318 ms
+2025-03-14T13:31:49.358+03:00  INFO 17060 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-14T13:31:49.474+03:00  INFO 17060 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-03-14T13:31:49.526+03:00  INFO 17060 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-14T13:31:49.651+03:00  INFO 17060 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2025-03-14T13:31:49.973+03:00  INFO 17060 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-14T13:31:50.012+03:00  INFO 17060 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-14T13:31:50.192+03:00  INFO 17060 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5613247e
+2025-03-14T13:31:50.195+03:00  INFO 17060 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-14T13:31:50.670+03:00  INFO 17060 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
+2025-03-14T13:31:50.673+03:00  INFO 17060 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
+2025-03-14T13:31:51.975+03:00 ERROR 17060 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2025-03-14T13:31:51.987+03:00  INFO 17060 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-14T13:31:52.143+03:00  INFO 17060 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T13:31:52.480+03:00  INFO 17060 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-14T13:31:54.610+03:00  INFO 17060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-14T13:31:54.685+03:00  INFO 17060 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 8.912 seconds (process running for 10.326)
+2025-03-14T13:32:22.746+03:00  INFO 17060 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-14T13:32:22.746+03:00  INFO 17060 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-14T13:32:22.747+03:00  INFO 17060 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-14T13:32:22.996+03:00  WARN 17060 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.example.library_on_spring.dto.UserReadDto> org.example.library_on_spring.controller.UserController.create(org.example.library_on_spring.dto.UserCreateEditDto) with 7 errors: [Field error in object 'userCreateEditDto' on field 'lastname': rejected value []; codes [Size.userCreateEditDto.lastname,Size.lastname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.lastname,lastname]; arguments []; default message [lastname],50,2]; default message [Длина фамилии должна быть не менее 2 и не более 50 символов]] [Field error in object 'userCreateEditDto' on field 'firstname': rejected value []; codes [Size.userCreateEditDto.firstname,Size.firstname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname],50,2]; default message [Длина имени должна быть не менее 2 и не более 50 символов]] [Field error in object 'userCreateEditDto' on field 'lastname': rejected value []; codes [NotBlank.userCreateEditDto.lastname,NotBlank.lastname,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.lastname,lastname]; arguments []; default message [lastname]]; default message [не должно быть пустым]] [Field error in object 'userCreateEditDto' on field 'lastname': rejected value []; codes [Pattern.userCreateEditDto.lastname,Pattern.lastname,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.lastname,lastname]; arguments []; default message [lastname],[Ljakarta.validation.constraints.Pattern$Flag;@2b1e633b,[a-zA-Zа-яА-Я]+]; default message [Фамилия должна состоять только из букв]] [Error in object 'userCreateEditDto': codes [UserInfo.userCreateEditDto,UserInfo]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto]; arguments []; default message []]; default message [Имя и фамилия должны быть заполнены]] [Field error in object 'userCreateEditDto' on field 'firstname': rejected value []; codes [Pattern.userCreateEditDto.firstname,Pattern.firstname,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname],[Ljakarta.validation.constraints.Pattern$Flag;@2b1e633b,^[a-zA-Zа-яА-Я\s-]+$]; default message [Имя должно состоять только из букв]] [Field error in object 'userCreateEditDto' on field 'firstname': rejected value []; codes [NotBlank.userCreateEditDto.firstname,NotBlank.firstname,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname]]; default message [не должно быть пустым]] ]
+2025-03-14T13:33:05.870+03:00  INFO 17060 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T13:33:05.875+03:00  INFO 17060 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-14T13:33:05.887+03:00  INFO 17060 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-14T13:33:12.883+03:00  INFO 15196 --- [main] o.e.library_on_spring.ApplicationRunner  : Starting ApplicationRunner using Java 21.0.6 with PID 15196 (G:\projects\library_on_spring\build\classes\java\main started by Admin in G:\projects\library_on_spring)
+2025-03-14T13:33:12.885+03:00  INFO 15196 --- [main] o.e.library_on_spring.ApplicationRunner  : No active profile set, falling back to 1 default profile: "default"
+2025-03-14T13:33:14.268+03:00  INFO 15196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-14T13:33:14.413+03:00  INFO 15196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 3 JPA repository interfaces.
+2025-03-14T13:33:15.356+03:00  INFO 15196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-14T13:33:15.374+03:00  INFO 15196 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-14T13:33:15.374+03:00  INFO 15196 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-03-14T13:33:15.594+03:00  INFO 15196 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-03-14T13:33:15.599+03:00  INFO 15196 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-14T13:33:15.600+03:00  INFO 15196 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2634 ms
+2025-03-14T13:33:15.789+03:00  INFO 15196 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-14T13:33:15.901+03:00  INFO 15196 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-03-14T13:33:15.946+03:00  INFO 15196 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-14T13:33:16.053+03:00  INFO 15196 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2025-03-14T13:33:16.364+03:00  INFO 15196 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-14T13:33:16.400+03:00  INFO 15196 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-14T13:33:16.585+03:00  INFO 15196 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@271e851e
+2025-03-14T13:33:16.588+03:00  INFO 15196 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-14T13:33:17.017+03:00  INFO 15196 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.User
+2025-03-14T13:33:17.019+03:00  INFO 15196 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: org.example.library_on_spring.database.entity.Book
+2025-03-14T13:33:18.280+03:00 ERROR 15196 --- [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2025-03-14T13:33:18.295+03:00  INFO 15196 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-14T13:33:18.437+03:00  INFO 15196 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T13:33:18.898+03:00  INFO 15196 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-14T13:33:20.580+03:00  INFO 15196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-14T13:33:20.591+03:00  INFO 15196 --- [main] o.e.library_on_spring.ApplicationRunner  : Started ApplicationRunner in 8.518 seconds (process running for 9.771)
+2025-03-14T13:33:22.087+03:00  INFO 15196 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-14T13:33:22.088+03:00  INFO 15196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-14T13:33:22.091+03:00  INFO 15196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-03-14T13:33:23.194+03:00  INFO 15196 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 794 ms
+2025-03-14T13:33:40.850+03:00  WARN 15196 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.example.library_on_spring.dto.UserReadDto> org.example.library_on_spring.controller.UserController.create(org.example.library_on_spring.dto.UserCreateEditDto) with 5 errors: [Field error in object 'userCreateEditDto' on field 'firstname': rejected value []; codes [Pattern.userCreateEditDto.firstname,Pattern.firstname,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname],[Ljakarta.validation.constraints.Pattern$Flag;@7156cc87,^[a-zA-Zа-яА-Я\s-]+$]; default message [Имя должно состоять только из букв]] [Error in object 'userCreateEditDto': codes [UserInfo.userCreateEditDto,UserInfo]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto]; arguments []; default message []]; default message [Имя и фамилия должны быть заполнены]] [Field error in object 'userCreateEditDto' on field 'lastname': rejected value []; codes [Size.userCreateEditDto.lastname,Size.lastname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.lastname,lastname]; arguments []; default message [lastname],50,2]; default message [Длина фамилии должна быть не менее 2 и не более 50 символов]] [Field error in object 'userCreateEditDto' on field 'firstname': rejected value []; codes [Size.userCreateEditDto.firstname,Size.firstname,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.firstname,firstname]; arguments []; default message [firstname],50,2]; default message [Длина имени должна быть не менее 2 и не более 50 символов]] [Field error in object 'userCreateEditDto' on field 'lastname': rejected value []; codes [Pattern.userCreateEditDto.lastname,Pattern.lastname,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateEditDto.lastname,lastname]; arguments []; default message [lastname],[Ljakarta.validation.constraints.Pattern$Flag;@7156cc87,[a-zA-Zа-яА-Я]+]; default message [Фамилия должна состоять только из букв]] ]
+2025-03-14T13:40:17.066+03:00  INFO 15196 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-14T13:40:17.072+03:00  INFO 15196 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-14T13:40:17.108+03:00  INFO 15196 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

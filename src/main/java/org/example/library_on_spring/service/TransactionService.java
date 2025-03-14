@@ -63,7 +63,7 @@ public class TransactionService {
         transaction.setUser(user);
         transaction.setBook(book);
         transaction.setIssueDate(LocalDateTime.now());
-        book.setUser(user); // Назначаем владельца книги
+        book.setUser(user);
         bookRepository.save(book);
         return transactionRepository.save(transaction);
     }
@@ -106,7 +106,7 @@ public class TransactionService {
     @Transactional(readOnly = true)
     public List<BookReadDto> getIssuedBooks() {
         return transactionRepository.findIssuedBooks().stream()
-                .map(bookReadMapper::map)  // Преобразуем в DTO
+                .map(bookReadMapper::map)
                 .toList();
     }
 }
