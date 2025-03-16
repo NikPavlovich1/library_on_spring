@@ -1,4 +1,4 @@
-package org.example.library_on_spring.controller;
+package org.example.library_on_spring.http.controller;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;

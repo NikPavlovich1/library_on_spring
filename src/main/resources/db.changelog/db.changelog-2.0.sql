@@ -19,3 +19,5 @@ ALTER TABLE users
 --changeset piton:8
 ALTER TABLE transactions
     ALTER COLUMN return_date SET NOT NULL;
+
+

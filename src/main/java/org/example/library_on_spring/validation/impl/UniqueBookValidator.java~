@@ -1,0 +1,36 @@
+package org.example.library_on_spring.validation.impl;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
+import org.example.library_on_spring.dto.BookCreateEditDto;
+import org.example.library_on_spring.repository.BookRepository;
+import org.example.library_on_spring.validation.UniqueBook;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class UniqueBookValidator implements ConstraintValidator<UniqueBook, BookCreateEditDto> {
+
+    @Autowired
+    private BookRepository bookRepository;
+
+    @Override
+    public void initialize(UniqueBook constraintAnnotation) {
+        // Инициализация валидатора (если нужно)
+    }
+
+    @Override
+    public boolean isValid(BookCreateEditDto bookDto, ConstraintValidatorContext context) {
+        if (bookDto == null) {
+            return true; // Если объект null, считаем его валидным
+        }
+
+        // Проверяем, существует ли книга с таким же названием и автором
+        boolean exists = bookRepository.existsByTitleAndAuthor(
+                bookDto.getTitle(),
+                bookDto.getAuthor()
+        );
+
+        // Если книга существует, возвращаем false (невалидно)
+        return !exists;
+    }
+}

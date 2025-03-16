@@ -53,4 +53,19 @@ public class Book implements BaseEntity<Long>{
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private List<Transaction> transactions;
+
+    @Column(nullable = true)
+    private Boolean available = true;
+
+    public boolean isAvailable() {
+        return this.user == null;
+    }
+
+    public void setAvailable(boolean available) {
+        if (available) {
+            this.user = null;
+        } else {
+            throw new UnsupportedOperationException("Невозможно установить доступность книги напрямую. Используйте метод выдачи книги.");
+        }
+    }
 }

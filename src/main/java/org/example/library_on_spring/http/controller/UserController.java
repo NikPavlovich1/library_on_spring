@@ -1,6 +1,8 @@
-package org.example.library_on_spring.controller;
+package org.example.library_on_spring.http.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
+import jakarta.validation.groups.Default;
 import lombok.extern.slf4j.Slf4j;
 import org.example.library_on_spring.database.entity.User;
 import org.example.library_on_spring.dto.UserCreateEditDto;
@@ -37,13 +39,13 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<UserReadDto> create(@RequestBody @Validated UserCreateEditDto userDto) {
+    public ResponseEntity<UserReadDto> create(@RequestBody @Validated({Default.class}) UserCreateEditDto userDto) {
         UserReadDto createdUser = userService.create(userDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<UserReadDto> update(@PathVariable Long id, @RequestBody @Validated UserCreateEditDto userDto) {
+    public ResponseEntity<UserReadDto> update(@PathVariable Long id, @RequestBody @Validated({Default.class}) UserCreateEditDto userDto) {
         UserReadDto updatedUser = userService.update(id, userDto);
         return ResponseEntity.ok(updatedUser);
     }
