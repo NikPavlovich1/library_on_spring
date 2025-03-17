@@ -1,17 +1,25 @@
 package org.example.library_on_spring.service;
 
 import org.example.library_on_spring.database.entity.Book;
+import org.example.library_on_spring.database.entity.Role;
 import org.example.library_on_spring.database.entity.User;
 import org.example.library_on_spring.database.repository.UserRepository;
 import org.example.library_on_spring.dto.UserCreateEditDto;
 import org.example.library_on_spring.dto.UserReadDto;
 import org.example.library_on_spring.mapper.UserCreateEditMapper;
 import org.example.library_on_spring.mapper.UserReadMapper;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+
+import static org.example.library_on_spring.database.entity.QUser.user;
 
 @Service
 @Transactional
@@ -20,12 +28,17 @@ public class UserService {
     private final UserRepository userRepository;
     private final UserReadMapper userReadMapper;
     private final UserCreateEditMapper userCreateEditMapper;
+    private final PasswordEncoder passwordEncoder;
 
 
-    public UserService(UserRepository userRepository, UserReadMapper userReadMapper, UserCreateEditMapper userCreateEditMapper) {
+    public UserService(UserRepository userRepository,
+                       UserReadMapper userReadMapper,
+                       UserCreateEditMapper userCreateEditMapper,
+                       PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.userReadMapper = userReadMapper;
         this.userCreateEditMapper = userCreateEditMapper;
+        this.passwordEncoder = passwordEncoder;
 
     }
 
@@ -84,5 +97,4 @@ public class UserService {
                 query, query, query
         );
     }
-
 }
