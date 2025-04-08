@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Library Home</title>
+    <style>
+        .logout-form {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .logout-btn {
+            background: #ff4444;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>Добро пожаловать в библиотеку!</h1>
+
+<!-- Форма выхода -->
+<form class="logout-form" th:action="@{/logout}" method="post">
+    <button class="logout-btn" type="submit">Выйти</button>
+</form>
+
+<p>Доступ к Swagger: <a href="/swagger-ui.html">перейти</a></p>
+</body>
+</html>

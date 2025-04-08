@@ -12,7 +12,6 @@ import java.time.LocalDate;
 @Value
 @FieldNameConstants
 @UserInfo
-@UniqueUserName
 public class UserCreateEditDto {
 
     @Schema(description = "Имя пользователя", example = "Длина имени должна быть не менее 2 и не более 50 символов. Имя должно состоять только из букв", requiredMode = Schema.RequiredMode.REQUIRED)

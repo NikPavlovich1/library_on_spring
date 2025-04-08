@@ -3,8 +3,11 @@ package org.example.library_on_spring.configuration;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
+import io.swagger.v3.oas.models.security.SecurityScheme;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
 
 @Configuration
 public class SwaggerConfiguration {
@@ -13,9 +16,13 @@ public class SwaggerConfiguration {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .components(new Components())
+
                 .info(new Info()
                         .title("Library API")
                         .version("1.0")
-                        .description("API для управления библиотекой"));
+                        .description("API для управления библиотекой")
+                        );
     }
+
+
 }
