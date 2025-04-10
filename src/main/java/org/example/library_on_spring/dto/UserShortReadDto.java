@@ -2,7 +2,6 @@ package org.example.library_on_spring.dto;
 
 import lombok.Value;
 
-import java.time.LocalDate;
 
 @Value
 public class UserShortReadDto{

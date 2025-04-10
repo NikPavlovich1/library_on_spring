@@ -1,7 +1,7 @@
 package org.example.library_on_spring.http.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.library_on_spring.dto.RegisterAdminRequest;
+import org.example.library_on_spring.dto.RegistrationRequest;
 import org.example.library_on_spring.service.AuthService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,15 +26,4 @@ public class WebAuthController {
         return "registration";
     }
 
-    @PostMapping("/registration")
-    public String registerAdmin(@ModelAttribute RegisterAdminRequest request, RedirectAttributes redirectAttrs) {
-        try {
-            authService.registerAdmin(request);
-            redirectAttrs.addFlashAttribute("success", "Регистрация успешна!");
-            return "redirect:/web/auth/login";
-        } catch (Exception e) {
-            redirectAttrs.addFlashAttribute("error", "Ошибка: " + e.getMessage());
-            return "redirect:/web/auth/registration";
-        }
-    }
 }

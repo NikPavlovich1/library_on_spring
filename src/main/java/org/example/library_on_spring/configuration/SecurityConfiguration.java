@@ -17,11 +17,13 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf().disable()
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/web/auth/**", "static/**").permitAll()
-                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").authenticated()
-                        .anyRequest().authenticated()
+                                .requestMatchers("/web/auth/registration").hasRole("SUPERUSER")
+                                .requestMatchers("/web/auth/**", "static/**").permitAll()
+//                        .requestMatchers("/web/home").authenticated()
+                                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").authenticated()
+                                .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
                         .loginPage("/web/auth/login")

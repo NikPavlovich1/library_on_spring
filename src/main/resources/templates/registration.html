@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>Регистрация админа</h1>
-<form th:action="@{/web/auth/registration}" method="post">
+<form th:action="@{/web/auth/registration}" method="post" enctype="application/x-www-form-urlencoded">
     <input type="text" name="username" placeholder="Логин" required>
     <input type="password" name="password" placeholder="Пароль" required>
     <select name="role">
@@ -16,5 +16,6 @@
 </form>
 <div th:if="${success}" th:text="${success}" style="color: green;"></div>
 <div th:if="${error}" th:text="${error}" style="color: red;"></div>
+<p>Доступ к Swagger: <a href="/swagger-ui.html">перейти</a></p>
 </body>
 </html>
